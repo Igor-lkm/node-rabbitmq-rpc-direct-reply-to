@@ -1,0 +1,26 @@
+{
+  "name": "node-rabbit-rpc-direct-reply-to",
+  "version": "0.0.1",
+  "description": "Example of RabbitMQ RPC Direct reply-to with node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "rpc",
+    "node.js",
+    "rabbitmq"
+  ],
+  "author": "Igor Likhomanov",
+  "license": "MIT",
+  "dependencies": {
+    "amqplib": "^0.5.3",
+    "pm2": "^3.2.9",
+    "uuid": "^3.3.2"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {}
+}
