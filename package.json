@@ -15,8 +15,8 @@
   "author": "Igor Likhomanov",
   "license": "MIT",
   "dependencies": {
-    "amqplib": "^0.5.3",
-    "uuid": "^3.3.2"
+    "amqplib": "^0.10.0",
+    "uuid": "^8.3.2"
   },
   "directories": {
     "lib": "lib"

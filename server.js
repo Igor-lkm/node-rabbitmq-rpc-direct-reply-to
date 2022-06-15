@@ -1,5 +1,4 @@
-const amqp = require('amqplib');
-const uuidv4 = require('uuid/v4');
+const { v4: uuidv4 } = require('uuid');
 
 const RABBITMQ = 'amqp://guest:guest@localhost:5672';
 
@@ -8,13 +7,13 @@ const q = 'example';
 
 // Consumer
 open
-  .then(function(conn) {
+  .then(function (conn) {
     console.log(`[ ${new Date()} ] Server started`);
     return conn.createChannel();
   })
-  .then(function(ch) {
-    return ch.assertQueue(q).then(function(ok) {
-      return ch.consume(q, function(msg) {
+  .then(function (ch) {
+    return ch.assertQueue(q).then(function (ok) {
+      return ch.consume(q, function (msg) {
         console.log(
           `[ ${new Date()} ] Message received: ${JSON.stringify(
             JSON.parse(msg.content.toString('utf8')),
